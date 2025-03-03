@@ -1,19 +1,17 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 
-const Logo: React.FC = () => {
-
+const Logo = () => {
   return (
-    <Link href="/" className='flex items-center text-black dark:text-white text-2xl font-semibold gap-4'>
+    <Link href="/" className="flex items-center">
       <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: 'auto', height: 'auto' }}
-        quality={100}
+        src="/images/logo.svg" 
+        alt="Logo"
+        width={140}
+        height={40}
+        className="h-auto"
+        priority
       />
-      Mobile Application
     </Link>
   );
 };

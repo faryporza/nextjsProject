@@ -1,12 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   output: 'export',
   images: {
     unoptimized: true,
+    // Allow loading images from all domains to prevent issues with static export
+    domains: ['localhost'],
+    // Remove any path restrictions for images
+    path: '/_next/image',
   },
-  basePath: '/nextjsProject', // Should match your repository name
-  assetPrefix: '/nextjsProject/', // Should match your repository name
+  basePath: process.env.NODE_ENV === 'production' ? '/nextjsProject' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/nextjsProject/' : '',
+  // Ensure trailing slashes consistent
+  trailingSlash: true,
+  // Enable React StrictMode
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
