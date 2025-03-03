@@ -61,7 +61,16 @@ export const ExpertData: {
 
 // data.tsx
 export const galleryImages = [
-  { src: getImagePath('/images/Gallery/foodone.jpg')},
-  { src: getImagePath('/images/Gallery/foodtwo.jpg')},
-  { src: getImagePath('/images/Gallery/foodfour.jpg')},
+  { 
+    src: getImagePath('/images/Gallery/foodone.jpg'),
+    name: 'Gallery Image 1'
+  },
+  { 
+    src: getImagePath('/images/Gallery/foodtwo.jpg'),
+    name: 'Gallery Image 2'
+  },
+  { 
+    src: getImagePath('/images/Gallery/foodfour.jpg'),
+    name: 'Gallery Image 3'
+  },
 ];
